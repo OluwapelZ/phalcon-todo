@@ -14,7 +14,7 @@ return [
             'adapter' => 'mysql',
             'host' => '%%PHINX_DBHOST%%',
             'name' => '%%PHINX_DBNAME%%',
-            'user' => '%%PHINX_DBUSER%%',
+            'Todo' => '%%PHINX_DBUSER%%',
             'pass' => '%%PHINX_DBPASS%%',
             'port' => '3306',
             'charset' => 'utf8'
@@ -24,7 +24,7 @@ return [
             'adapter' => 'mysql',
             'host' => '%%PHINX_DBHOST%%',
             'name' => '%%PHINX_DBNAME%%',
-            'user' => '%%PHINX_DBUSER%%',
+            'Todo' => '%%PHINX_DBUSER%%',
             'pass' => '%%PHINX_DBPASS%%',
             'port' => '3306',
             'charset' => 'utf8'
@@ -34,7 +34,7 @@ return [
             'adapter' => 'mysql',
             'host' => 'localhost',
             'name' => 'vconnect_sss',
-            'user' => 'root',
+            'Todo' => 'root',
             'pass' => '',
             'port' => '3306',
             'charset' => 'utf8'
@@ -44,7 +44,7 @@ return [
             'adapter' => 'mysql',
             'host' => 'localhost',
             'name' => 'vconnect_sss_test',
-            'user' => 'root',
+            'Todo' => 'root',
             'pass' => '',
             'port' => '3306',
             'charset' => 'utf8'

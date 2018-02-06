@@ -7,7 +7,7 @@ use PhalconUtils\Constants\Services as BaseServices;
 /**
  * Class Services
  * @author Adeyemi Olaoye <yemi@cottacush.com>
- * @package App\Library\Constants
+ * @package App\Library\constants
  */
 class Services extends BaseServices
 {

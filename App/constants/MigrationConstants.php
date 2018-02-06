@@ -5,7 +5,7 @@ namespace App\Constants;
 /**
  * Class MigrationConstants
  * @author Adeyemi Olaoye <yemi@cottacush.com>
- * @package App\Constants
+ * @package App\constants
  */
 class MigrationConstants
 {

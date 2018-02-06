@@ -2,14 +2,14 @@
 
 return [
     'application' => [
-        'modelsDir' => __DIR__ . '/../Model/',
-        'controllersDir' => __DIR__ . '/../Controller/',
+        'modelsDir' => __DIR__ . '/../model/',
+        'controllersDir' => __DIR__ . '/../controller/',
         'libsDir' => __DIR__ . '/../Library/',
         'interfacesDir' => __DIR__ . '/../Interfaces/',
         'pluginsDir' => __DIR__ . '/../plugins/',
         'logsDir' => __DIR__ . '/../logs/',
-        'constantsDir' => __DIR__ . '/../Constants/',
-        'middlewaresDir' => __DIR__ . '/../Middleware/',
+        'constantsDir' => __DIR__ . '/../constants/',
+        'middlewaresDir' => __DIR__ . '/../middleware/',
         'tasksDir' => __DIR__ . '/../tasks/',
         'appDir' => __DIR__ . '/../'
     ],

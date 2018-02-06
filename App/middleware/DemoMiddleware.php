@@ -7,7 +7,7 @@ use PhalconUtils\Middleware\BaseMiddleware;
 /**
  * Class DemoMiddleware
  * @author Adeyemi Olaoye <yemi@cottacush.com>
- * @package App\Middleware
+ * @package App\middleware
  */
 class DemoMiddleware extends BaseMiddleware
 {
