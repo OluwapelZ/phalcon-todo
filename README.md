@@ -1,10 +1,6 @@
-# Phalcon Base Project
+# Phalcon Todo Project
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
-
-> Base project for bootstrapping phalcon projects
+This is a PHP project for writing REST APIs with Phalcon framework.
 
 ## Requirements
 The minimum requirement by this project template that your Web server supports PHP 5.6
@@ -103,17 +99,8 @@ Seed the database by running the following commands:
 `CLIENT_ID='<CLIENT_ID>' CLIENT_SECRET='<CLIENT_SECRET>' ./vendor/bin/phinx seed:run -s OauthSeeder -e development`
 
 
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Security
-
-If you discover any security related issues, please email <developers@cottacush.com> instead of using the issue tracker.
-
 ## Credits
-
+- [Oluwapelumi Olaoye <oluwapelumi.olaoye@konga.com>]
 - [Adeyemi Olaoye <yemi@cottacush.com>] [link-author]
 - [All Contributors][link-contributors]
 
