@@ -23,7 +23,7 @@ class Todo extends BaseModel
      *
      * @param $title
      * @param $description
-     * @return mixed User|bool
+     * @return mixed Todo|bool
      */
     public static function createTodo($title, $description) {
         $todo = new Todo();
@@ -31,8 +31,7 @@ class Todo extends BaseModel
         $todo->description = $description;
 
         if ($todo->save()) {
-           $todo->refresh();
-           return $todo;
+           return $todo->refresh();
         }
         return false;
     }
@@ -43,7 +42,7 @@ class Todo extends BaseModel
      * @param Todo $todo
      * @param $title
      * @param $description
-     * @return mixed User|bool
+     * @return mixed Todo|bool
      */
     public static function updateTodo($todo, $title, $description) {
         if(isset($title)) {

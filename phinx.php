@@ -10,42 +10,36 @@ return [
     'environments' => [
         'default_migration_table' => 'phinxlog',
         'default_database' => 'development',
-        'production' => [
-            'adapter' => 'mysql',
-            'host' => '%%PHINX_DBHOST%%',
-            'name' => '%%PHINX_DBNAME%%',
-            'Todo' => '%%PHINX_DBUSER%%',
-            'pass' => '%%PHINX_DBPASS%%',
-            'port' => '3306',
-            'charset' => 'utf8'
-        ],
 
-        'staging' => [
+        'mysql' => [
             'adapter' => 'mysql',
-            'host' => '%%PHINX_DBHOST%%',
-            'name' => '%%PHINX_DBNAME%%',
-            'Todo' => '%%PHINX_DBUSER%%',
-            'pass' => '%%PHINX_DBPASS%%',
-            'port' => '3306',
-            'charset' => 'utf8'
+            'host' => getenv('DB_Host', '127.0.0.1'),
+            'database' => getenv('DB_NAME', 'todo_mysql'),
+            'username' => getenv('DB_USERNAME', 'root'),
+            'password' => getenv('DB_PASSWORD', 'root'),
+            'port' => getenv('DB_PORT', '3308'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
         ],
 
         'development' => [
             'adapter' => 'mysql',
-            'host' => 'localhost',
-            'name' => 'vconnect_sss',
-            'Todo' => 'root',
-            'pass' => '',
-            'port' => '3306',
+            'host' => '127.0.0.1:3308',
+            'name' => 'todo_mysql',
+            'user' => 'root',
+            'pass' => 'root',
+            'port' => '3308',
             'charset' => 'utf8'
         ],
 
         'testing' => [
             'adapter' => 'mysql',
-            'host' => 'localhost',
-            'name' => 'vconnect_sss_test',
+            'host' => 'localhost:3308',
+            'name' => 'todo_mysql',
             'Todo' => 'root',
-            'pass' => '',
+            'pass' => 'root',
             'port' => '3306',
             'charset' => 'utf8'
         ]

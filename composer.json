@@ -16,7 +16,6 @@
     "cottacush/phalcon-utils": "^2.3",
     "redound/phalcon-rest": "^1.4.0",
     "vlucas/phpdotenv": "^2.2",
-    "robmorgan/phinx": "^0.5.3",
     "ext-phalcon": ">=3.0.0",
     "jeremyharris/psr3-papertrail": "^1.0",
     "guzzlehttp/guzzle": "~5.0",
@@ -25,7 +24,8 @@
     "codeception/codeception": "^2.3",
     "wixel/gump": "dev-master",
     "phalcon/devtools": "3.1.2",
-    "zircote/swagger-php": "^2.0"
+    "zircote/swagger-php": "^2.0",
+    "robmorgan/phinx": "^0.9.2"
   },
   "require-dev": {
     "codeception/codeception": "^2.2",

@@ -45,57 +45,57 @@ include __DIR__ . "/../App/endpoints/todo.php";
 
 
 // Bootstrap components
-$bootstrap = new Bootstrap(
-    new LogServicesBootstrap,
-    new ApiServicesBootStrap,
-    new OAuthServiceBootstrap,
-    new MiddlewareBootstrap,
-    new RouteBootstrap,
-    new OAuthRouteBootstrap
-);
-
-$bootstrap->run($app, $di, $config);
-
-
-//handle invalid routes
-$app->notFound(function () use ($app) {
-    $message = ResponseMessages::getMessageFromCode(ResponseCodes::METHOD_NOT_IMPLEMENTED);
-    $code = ResponseCodes::METHOD_NOT_IMPLEMENTED;
-    send($app, $message, $code, 501);
-});
-
-// Handle invalid routes
-function send($app, $message, $code, $httpStatusCode)
-{
-    $app->response->setStatusCode($httpStatusCode, HttpStatusCodes::getMessage($httpStatusCode))->sendHeaders();
-    $app->response->setContentType('application/json');
-    $app->response->setJsonContent(
-        array(
-            'status' => 'error',
-            'message' => $message,
-            'code' => $code
-        )
-    );
-    $app->response->send();
-    exit;
-}
+//$bootstrap = new Bootstrap(
+//    new LogServicesBootstrap,
+//    new ApiServicesBootStrap,
+//    new OAuthServiceBootstrap,
+//    new MiddlewareBootstrap,
+//    new RouteBootstrap,
+//    new OAuthRouteBootstrap
+//);
+//
+//$bootstrap->run($app, $di, $config);
 
 
-//handle errors and exceptions
-$app->error(function ($exception) use ($app) {
-    $app->response->setContentType('application/json');
-    $app->response->setStatusCode(500, HttpStatusCodes::getMessage(500))->sendHeaders();
-    $app->response->setJsonContent(
-        [
-            'status' => 'error',
-            'message' => ResponseMessages::getMessageFromCode(ResponseCodes::UNEXPECTED_ERROR),
-            'code' => ResponseCodes::UNEXPECTED_ERROR,
-            'ex' => $exception->getMessage()
-        ]
-    );
+////handle invalid routes
+//$app->notFound(function () use ($app) {
+//    $message = ResponseMessages::getMessageFromCode(ResponseCodes::METHOD_NOT_IMPLEMENTED);
+//    $code = ResponseCodes::METHOD_NOT_IMPLEMENTED;
+//    send($app, $message, $code, 501);
+//});
+//
+//// Handle invalid routes
+//function send($app, $message, $code, $httpStatusCode)
+//{
+//    $app->response->setStatusCode($httpStatusCode, HttpStatusCodes::getMessage($httpStatusCode))->sendHeaders();
+//    $app->response->setContentType('application/json');
+//    $app->response->setJsonContent(
+//        array(
+//            'status' => 'error',
+//            'message' => $message,
+//            'code' => $code
+//        )
+//    );
+//    $app->response->send();
+//    exit;
+//}
+//
+//
+////handle errors and exceptions
+//$app->error(function ($exception) use ($app) {
+//    $app->response->setContentType('application/json');
+//    $app->response->setStatusCode(500, HttpStatusCodes::getMessage(500))->sendHeaders();
+//    $app->response->setJsonContent(
+//        [
+//            'status' => 'error',
+//            'message' => ResponseMessages::getMessageFromCode(ResponseCodes::UNEXPECTED_ERROR),
+//            'code' => ResponseCodes::UNEXPECTED_ERROR,
+//            'ex' => $exception->getMessage()
+//        ]
+//    );
+//
+//    $app->response->send();
+//});
 
-    $app->response->send();
-});
 
-
-$app->handle();
+//$app->handle();
